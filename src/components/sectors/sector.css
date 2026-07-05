@@ -1,0 +1,245 @@
+.SectorHerosection {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.SectorHerosectionContent {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.SectorHerosectionContent .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.SectorHerosectionContent .text h2 {
+  font-size: 39px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #222;
+}
+
+.SectorHerosectionContent .text p {
+  font-size: 18px;
+  line-height: 2;
+  color: #666;
+}
+
+.SectorHerosectionContent .text div:last-child {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.SectorHerosectionContent .image {
+  width: 50%;
+}
+
+.SectorHerosectionContent .image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 1200px) {
+  .SectorHerosectionContent {
+    gap: 40px;
+  }
+
+  .SectorHerosectionContent .text h2 {
+    font-size: 38px;
+  }
+
+  .SectorHerosectionContent .text p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 992px) {
+  .SectorHerosection {
+    padding: 60px 0;
+  }
+
+  .SectorHerosectionContent {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .SectorHerosectionContent .text,
+  .SectorHerosectionContent .image {
+    width: 100%;
+  }
+
+  .SectorHerosectionContent .text {
+    align-items: center;
+  }
+
+  .SectorHerosectionContent .text div:last-child {
+    justify-content: center;
+  }
+
+  .SectorHerosectionContent .text h2 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 768px) {
+  .SectorHerosection {
+    padding: 50px 20px;
+  }
+
+  .SectorHerosectionContent {
+    gap: 30px;
+  }
+
+  .SectorHerosectionContent .text h2 {
+    font-size: 28px;
+    line-height: 1.5;
+  }
+
+  .SectorHerosectionContent .text p {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .SectorHerosectionContent .text div:last-child {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .SectorHerosectionContent .text div:last-child a,
+  .SectorHerosectionContent .text div:last-child button {
+    width: 100%;
+  }
+}
+
+/* //////////////////////////////////////////////how tawasul serve you  */
+.tabs{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid        #00000052;
+}
+.tabs button{
+  border: 0px;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 20px;
+}
+.tabs .activeTab{
+   background-color: #3B5DC8;
+   color: white;
+}
+/* ////////////////////////// why sectors use twasul ////////////// */
+
+
+.whySectorsUseTwasul {
+  width: 100%;
+  padding: 80px 20px;
+}
+
+.whySectorsUseTwasulContent {
+  width: min(1200px, 100%);
+  margin: auto;
+  background: #3B5DC80D;
+  border-radius: 24px;
+  padding: 60px;
+}
+
+.whySectorsUseTwasul .sectionText {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pointsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.pointsContent {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 24px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+
+.PointImage {
+  width: 8px;
+  height: 100%;
+  min-width: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.PointImage img {
+  width: 24px;
+  height: 24px;
+}
+
+.pointText {
+  flex: 1;
+
+}
+
+.pointText p {
+  margin: 0;
+  color: #1F2533;
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .whySectorsUseTwasulContent {
+    padding: 40px 25px;
+  }
+
+  .pointsWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .whySectorsUseTwasul {
+    padding: 60px 15px;
+  }
+
+  .whySectorsUseTwasulContent {
+    padding: 30px 20px;
+    border-radius: 18px;
+  }
+
+  .pointsContent {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .PointImage {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .PointImage img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pointText p {
+    font-size: 15px;
+  }
+}

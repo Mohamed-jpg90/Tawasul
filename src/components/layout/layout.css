@@ -1,0 +1,560 @@
+.containerNavBar {
+    width: 100%;
+    height: 90px;
+    background-color: #3B5DC8;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Slide the navbar up out of view when scrolling down */
+.containerNavBar.navHidden {
+    transform: translateY(-100%);
+}
+
+/* Subtle shadow once the page has scrolled past the top */
+.containerNavBar.navScrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Push page content below the fixed navbar */
+body {
+    padding-top: 90px;
+}
+
+/* Logo */
+.logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoDiv img {
+    width:8rem;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* Mobile hamburger button (hidden on desktop) */
+.mobileMenuBtn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.mobileMenuBtn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Navigation Links */
+.linksDiv ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    /* list-style: none; */
+    margin: 0;
+    padding: 0;
+}
+
+.linksDiv ul li {
+    list-style: none;
+}
+
+.linksDiv ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0px;
+
+    transition: 0.2s;
+}
+
+.linksDiv ul li a:hover {
+    color: rgba(255, 255, 255, 0.507);
+}
+
+/* Auth Buttons */
+.authDiv {
+    display: flex;
+    align-items: center;
+}
+
+.authDiv  {
+    display: flex;
+    gap: 10px;
+}
+
+/* Mobile-only auth buttons inside the dropdown menu (hidden on desktop) */
+.authDivMobile {
+    display: none;
+}
+
+/* Login Button */
+
+
+.authDiv button:hover {
+    transform: translateY(-2px);
+}
+
+.sectorMenu {
+  position: relative;
+  padding: 30px 0;
+}
+
+/* Hidden by default */
+.sectorsPopup {
+  position: absolute;
+  top: 82px;
+  right: -180px;
+
+  width: 620px;
+  min-height: 350px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 10px 15px rgba(0, 0, 0, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.12);
+
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+/* Show popup when hovering "القطاعات" OR the popup itself */
+.sectorMenu:hover .sectorsPopup {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.sectorsList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1px;
+  border-left: 1px solid #eeeeee;
+}
+
+.sectorItem {
+  padding: 10px 12px;
+  border-radius: 8px;
+
+  /* color: #333; */
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.sectorItem:hover,
+.activeSector {
+  /* background-color: #edf1ff; */
+  color: #3b5dc8;
+}
+
+.sectorDetails {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.sectorDetails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.sectorDetails h3 {
+  margin: 0;
+  color: #3b5dc8;
+  font-size: 20px;
+}
+
+.sectorDetails p {
+  margin: 0;
+  color: #666;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.sectorDetails .link {
+  width: fit-content;
+  color: #3b5dc8;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sectorDetails .link:hover {
+  /* text-decoration: underline; */
+  color: #3b5cc8be;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .containerNavBar {
+        height: 70px;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .logoDiv {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .mobileMenuBtn {
+        display: flex;
+    }
+
+    /* Slide-down mobile menu panel */
+    .linksDiv {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+
+        background-color: #3B5DC8;
+
+        padding: 0 20px;
+
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: max-height 0.3s ease, opacity 0.25s ease, visibility 0.3s ease;
+    }
+
+    .linksDiv.linksDivOpen {
+        max-height: calc(100vh - 70px);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        padding: 20px;
+    }
+
+    .linksDiv ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .linksDiv ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .linksDiv ul li a {
+        display: block;
+        padding: 14px 0;
+        font-size: 17px;
+    }
+
+    /* Sector dropdown becomes inline/static on mobile instead of a floating popup */
+    .sectorMenu {
+        padding: 0;
+    }
+
+    .sectorsPopup {
+        position: static;
+        top: auto;
+        right: auto;
+
+        width: 100%;
+        min-height: auto;
+
+        flex-direction: column;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 8px;
+
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .sectorMenu:hover .sectorsPopup,
+    .sectorMenu:focus-within .sectorsPopup {
+        max-height: 600px;
+        padding: 12px;
+        margin: 8px 0;
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .sectorsList,
+    .sectorDetails {
+        width: 100%;
+    }
+
+    .sectorsList {
+        border-left: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .sectorItem {
+        color: white;
+    }
+
+    .sectorItem:hover,
+    .activeSector {
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .sectorDetails h3 {
+        color: white;
+    }
+
+    .sectorDetails p {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .sectorDetails .link {
+        color: white;
+    }
+
+    .sectorDetails .link:hover {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Hide desktop auth buttons, show them inside the mobile menu instead */
+    .authDiv {
+        display: none;
+    }
+
+    .authDivMobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .authDivMobile button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerNavBar {
+        padding: 0 16px;
+    }
+
+    .logoDiv img {
+        width: 6.5rem;
+    }
+}
+
+/* ////////////footer///////////////////// */
+.footer {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  padding: 56px 64px;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  flex: 1;
+}
+
+.heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.label {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
+.label:first-of-type {
+  margin-top: 0;
+}
+
+.text {
+  font-size: 12px;
+  color: #9a9a9a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contactLink {
+  font-size: 13px;
+  color: #d9d9d9;
+  text-decoration: none;
+  margin-top: 2px;
+  width: fit-content;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.linkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link {
+  font-size: 12.5px;
+  color: #9a9a9a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.5;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.brandColumn {
+  align-self: center;
+  flex: 0 0 auto;
+  min-width: 180px;
+  margin-left: 80px;
+
+}
+
+.logoWrapper {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 28px;
+}
+
+.logoImage {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.socialRow {
+  display: flex;
+  gap: 14px;
+}
+
+.socialIconFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #3a3a3a;
+  color: #ffffff;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.socialIcon:hover {
+  background-color: #ffffff;
+  color: #0b0b0b;
+  border-color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 48px 32px;
+  }
+
+  .container {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .brandColumn {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,694 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Base Button Styles */
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.primaryButton {
+  background-color: #3B5DC8;
+  color: #ffffff;
+  border: 2px solid #3B5DC8;
+  transition: 0.2s;
+}
+
+.primaryButton:hover {
+  background-color: #ffffff;
+  color: #3B5DC8;
+
+  border: 2px solid #ffffff;
+
+
+}
+
+/* Secondary Button */
+.secondaryButton {
+  background-color: #ffffff;
+  color: #3B5DC8;
+  border: 2px solid #3B5DC8;
+  transition: 0.2s;
+
+}
+
+.secondaryButton:hover {
+  background-color: #3B5DC8;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+
+}
+
+/* Active Click Effect */
+.primaryButton:active,
+.secondaryButton:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
+/* ///////////////////icons///////////////// */
+.icons {
+  padding: 1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 10px 15px rgba(0, 0, 0, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.12);
+
+}
+
+.iconsImage img{
+  width: 30px;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+
+.icons{
+  width: 30px;
+  height: 30px;
+}.iconsImage img{
+  width: 20px;
+  height: 100%;
+  object-fit: cover;
+}
+}
+/* ///////////////card//////////////////// */
+.card {
+  width: min(1700px, 90%);
+  margin: 50px auto;
+  padding: 45px;
+  direction: rtl;
+  border-radius: 20px;
+  background: rgba(245, 245, 245, 1);
+  overflow: hidden;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(30px, 5vw, 60px);
+}
+
+.cardLeft .cardContent {
+  flex-direction: row-reverse;
+}
+
+.cardImage {
+  position: relative;
+  flex: 0 1 auto;
+  flex-shrink: 1;
+  overflow: hidden;
+  display: block;
+  max-width: 100%;
+}
+
+.cardImg {
+  object-fit: contain;
+}
+
+.cardtext {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cardHeading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cardNumber {
+  flex-shrink: 0;
+  color: #3b5dc8;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.cardHeading h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.cardList {
+  margin: 0 0 30px;
+  padding-right: 22px;
+  color: #555;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.cardList li::marker {
+  color: #3b5dc8;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .card {
+    width: 92%;
+    padding: 35px;
+  }
+
+  .cardContent {
+    gap: 30px;
+  }
+
+  .cardImage {
+    max-width: 45%;
+  }
+
+  .cardHeading h2 {
+    font-size: 26px;
+  }
+
+  .cardNumber {
+    font-size: 36px;
+  }
+
+  .cardList {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card {
+    width: 92%;
+    margin: 30px auto;
+    padding: 25px 20px;
+  }
+
+  .cardContent,
+  .cardLeft .cardContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+
+  .cardImage {
+    width: 100% !important;
+    max-width: 460px;
+    height: auto !important;
+    aspect-ratio: 5 / 4;
+    margin: 0 auto;
+  }
+
+  .cardtext {
+    width: 100%;
+  }
+
+  .cardHeading {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .cardHeading h2 {
+    font-size: 23px;
+  }
+
+  .cardNumber {
+    font-size: 32px;
+  }
+
+  .cardList {
+    margin-bottom: 22px;
+    padding-right: 20px;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .cardtext a,
+  .cardtext button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .card {
+    width: 94%;
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+
+  .cardImage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .cardHeading h2 {
+    font-size: 20px;
+  }
+
+  .cardNumber {
+    font-size: 28px;
+  }
+
+  .cardList {
+    font-size: 14px;
+    padding-right: 18px;
+  }
+}
+/* //////////////////////////////services card ///////////// */
+.serviceCard {
+  direction: rtl;
+  width: 100%;
+  padding: 15px 14px;
+  border-radius: 18px;
+  background: #F5F5F5;
+
+  padding: 15px 25px;
+  /* border: 1px solid rgba(59, 93, 200, 0.12); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(59, 93, 200, 0.15);
+}
+
+.serviceCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.serviceCardImage {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(59, 93, 200, 0.1);
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.serviceCardTitle {
+  /* margin: 0 0 12px; */
+  color: #1d1d1d;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.serviceCardDescription {
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* /////////////priceing card //////// */
+
+/* ===== Pricing Card ===== */
+
+.priceingCard {
+  position: relative;
+  background: #ffffff;
+  border: 2px solid #3B5DC8;
+  border-radius: 16px;
+  padding: 28px 24px;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+}
+
+
+/* Highlighted / primary plan */
+.priceingCardActive {
+  background: #3B5DC8;
+
+  color: #ffffff;
+  border: none;
+  transform: translateY(-12px);
+  box-shadow: 0 16px 32px rgba(47, 91, 224, 0.35);
+  z-index: 2;
+}
+
+
+
+/* Badge (top ribbon) */
+.cardBadge {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 50%;
+  transform: translate(50%, -50%);
+  background: #ffb020;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.PriceingCardCpntent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  direction: rtl;
+}
+
+/* Header */
+.cardHeader .cardTitle {
+  width: fit-content;
+  margin: auto;
+  padding: 10px 40px;
+  background-color: #7F92FF1A;
+  margin-bottom: 18px;
+  border-radius: 15px;
+
+
+}
+
+.cardHeaderPrimary .cardTitle {
+  width: fit-content;
+  margin: auto;
+
+  margin-bottom: 18px;
+  padding: 10px 40px;
+
+  background-color: #ffffff;
+  color: #3B5DC8;
+  border-radius: 15px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: inherit;
+}
+
+.cardSubtitle {
+  font-size: 13px;
+  margin: 0;
+  opacity: 0.75;
+  color: inherit;
+}
+
+/* Price */
+.cardPrice {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 22px;
+  min-height: 40px;
+}
+
+.priceValue {
+  font-size: 34px;
+  font-weight: 800;
+  color: inherit;
+}
+
+.priceCurrency {
+  font-size: 15px;
+  font-weight: 600;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.priceMonthly {
+  font-size: 13px;
+  opacity: 0.7;
+  color: inherit;
+  margin-inline-start: 4px;
+}
+
+.priceFree {
+  font-size: 28px;
+  font-weight: 800;
+  color: inherit;
+}
+
+/* Features */
+.featuresList {
+  list-style: none;
+  margin: 0 0 24px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+  text-align: start;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: inherit;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  /* background: rgba(58, 109, 240, 0.12); */
+  color: #3a6df0;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.priceingCardActive .checkIcon {
+  /* background: rgba(255, 255, 255, 0.18); */
+  color: #ffffff;
+}
+
+.featureText {
+  flex: 1;
+}
+
+/* Footer / Button */
+.cardFooter {
+  margin-top: auto;
+}
+
+.cardFooter a {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+  .priceingCard,
+  .priceingCardActive {
+    max-width: 100%;
+    transform: none;
+  }
+
+  .priceingCardActive:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* ////////////////explination div////////////////// */
+.explinationDivContent {
+  width: min(90%, 1400px);
+  margin: 30px auto 40px;
+  padding: 40px;
+  background-color: #3b5dc81a;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.explinationDivContent .divText {
+  flex: 1;
+}
+
+.explinationDivContent .divText h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.explinationDivContent .divButtom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+/* Tablet and mobile */
+@media (max-width: 750px) {
+  .explinationDivContent {
+    padding: 28px 20px;
+    /* flex-direction: column; */
+    text-align: center;
+    gap: 22px;
+    /* width: 100%;/ */
+  }
+
+  .explinationDivContent .divText h3 {
+    font-size: 18px;
+  }
+
+  .explinationDivContent .divButtom {
+    /* width: 100%; */
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* This targets the links/buttons inside your Button component */
+  .explinationDivContent .divButtom a,
+  .explinationDivContent .divButtom button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .explinationDivContent {
+    width: 92%;
+    padding: 22px 15px;
+  }
+
+  .explinationDivContent .divText h3 {
+    font-size: 16px;
+  }
+}
+
+/* //////////////////////////////////////preFooter//////////// */
+.preFooter {
+  padding: 30px 50px;
+}
+
+.preFooterContent {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.preFooterImage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.imageBox {
+  position: relative;   /* Required for Image fill */
+  width: 350px;
+  height: 120px;
+}
+
+.image {
+  object-fit: contain;
+}
+/* Large Tablets */
+@media (max-width: 992px) {
+  .preFooter {
+    padding: 30px;
+  }
+
+  .imageBox {
+    width: 40%;
+    height: 100px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .preFooter {
+    padding: 20px;
+  }
+
+  .preFooterImage {
+    gap: 20px;
+  }
+
+  .imageBox {
+    width: 42%;
+    height: 90px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .preFooter {
+    padding: 15px;
+  }
+
+  .preFooterImage {
+    gap: 15px;
+  }
+
+  .imageBox {
+    width: 45%;
+    height: 70px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+  .imageBox {
+    width: 46%;
+    height: 60px;
+  }
+}
