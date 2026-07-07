@@ -13,7 +13,7 @@ import HowToStart from "@/components/home/HowToStart";
 import ComanQustion from "@/components/home/ComanQustion";
 import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/home/ContactFrom";
-import PricingSection from "@/components/home/PricingSection";
+import PricingSection from "@/components/pricing/PricingSection";
 import PreFooter from "@/components/shared/PreFooter"; 
 import ExplinationDiv from "@/components/shared/ExplinationDiv";
 export default function Home() {

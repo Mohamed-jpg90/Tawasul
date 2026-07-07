@@ -39,9 +39,9 @@ export default function HeroSection({
            <div className='image' > 
             
             <Image src={img} alt="" />
-            <Image src={img1} alt="" className='absiluteImage img1' />
+            {/* <Image src={img1} alt="" className='absiluteImage img1' />
             <Image src={img2} alt="" className='absiluteImage img2' />
-            <Image src={img3} alt="" className='absiluteImage img3' />
+            <Image src={img3} alt="" className='absiluteImage img3' /> */}
 
               </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import './sector.css'
 import Button from '../shared/Button'
 import Image from 'next/image'
+import AppBreadcrumb from '../shared/AppBreadcrumb'
 export default function HeroSection({
     title,
     subTitle,
@@ -11,6 +12,7 @@ export default function HeroSection({
     <div className='SectorHerosection' >
       <div className='SectorHerosectionContent' >
            <div className='text' > 
+            <AppBreadcrumb />
             <div>
                 <h2>
                   {title}

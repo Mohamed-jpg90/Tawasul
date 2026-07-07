@@ -66,7 +66,12 @@ export default function RegisterForm({ onSubmit }) {
       <AuthTabs />
 
       <h1 className="auth-heading">مرحبا بك !</h1>
-      <p className="auth-subheading">إنشاء حساب جديد و تصفح موقعنا</p>
+      <p        style={{
+          textAlign: "right",
+          color: "#6B7280",
+          marginBottom: "32px",
+          lineHeight: "1.8",
+        }}>إنشاء حساب جديد و تصفح موقعنا</p>
 
       <form
         className="auth-form"

@@ -352,7 +352,7 @@ body {
   border-radius: 16px;
   padding: 28px 24px;
   width: 100%;
-  max-width: 340px;
+  /* max-width: 340px; */
   display: flex;
   flex-direction: column;
   height: 800px;
@@ -532,6 +532,7 @@ body {
   .priceingCardActive {
     max-width: 100%;
     transform: none;
+    height: fit-content;
   }
 
   .priceingCardActive:hover {
@@ -541,7 +542,7 @@ body {
 
 /* ////////////////explination div////////////////// */
 .explinationDivContent {
-  width: min(90%, 1400px);
+  width: min(100%, 95%);
   margin: 30px auto 40px;
   padding: 40px;
   background-color: #3b5dc81a;

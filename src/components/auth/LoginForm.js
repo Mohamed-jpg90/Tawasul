@@ -1,11 +1,11 @@
 "use client";
-import "./Auth.css";
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import AuthTabs from "./AuthTabs";
 // import "./AuthForm.css";
+import './Auth.css'
 
 const EyeIcon = ({ open }) => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">

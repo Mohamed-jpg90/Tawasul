@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import PriceingCard from "../shared/PriceingCard";
-import "./home.css";
+import "../home/home.css";
 
 const PLANS = {
   monthly: [

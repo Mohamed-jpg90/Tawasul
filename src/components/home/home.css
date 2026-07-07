@@ -91,7 +91,7 @@ max-width: fit-content;
 }
 
 .heroEllipseLeft {
-  top: 80%;
+  top: 50%;
   left: -260px;
   transform: translateY(-50%);
 }
@@ -171,22 +171,14 @@ max-width: fit-content;
   animation-delay: 2.3s;
 }
 
-/* @keyframes floatIcon {
-  0%,
-  100% {
-    margin-top: 0;
-  }
 
-  50% {
-    margin-top: -14px;
-  }
-} */
 
 /* Laptop / tablet */
 @media (max-width: 992px) {
   .herosection {
     min-height: 580px;
-    padding: 35px 40px;
+    padding: 5px 40px;
+    margin-top: -40px;
   }
 
   .herosectionContent {
@@ -269,12 +261,12 @@ max-width: fit-content;
 
   .heroEllipseRight {
     top: 25%;
-    right: -190px;
+    right: -200px;
   }
 
   .heroEllipseLeft {
-    top: 85%;
-    left: -190px;
+    top: 45%;
+    left: -200px;
   }
   .floatingIcon1 {
   top: 5%;
@@ -357,7 +349,7 @@ max-width: fit-content;
 
 .headerSeciont {
   margin: 0;
-  font-size: clamp(28px, 3vw, 38px);
+  font-size: 2rem;
   line-height: 1.5;
   text-align: center;
   color: #3b5dc8;
@@ -402,8 +394,10 @@ max-width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 0;
+  width: 160px; /* pick what fits your images */
+  flex-shrink: 0;
 }
+
 
 .sectorImage {
   width: 100%;
@@ -497,9 +491,27 @@ max-width: fit-content;
   }
 }
 
+
+/* //////////////marquee key frames////////////// */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--gap))); }
+}
+@keyframes marquee-vertical {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-200% - var(--gap))); }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) infinite linear;
+}
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration, 40s) infinite linear;
+}
+
 /* /////////////////////////why a wep page ///////////// */
 .whyWepPage {
-  width: 80%;
+  width: 100%;
   margin: auto;
   text-align: center;
   display: flex;
@@ -511,7 +523,7 @@ max-width: fit-content;
 }
 
 .sectionImage {
-  width: 50rem;
+  width: 65%;
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.05),
     0 10px 15px rgba(0, 0, 0, 0.08),
@@ -635,6 +647,7 @@ max-width: fit-content;
 .featuresCard {
   width: 95%;
   margin: 30px auto;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -657,6 +670,9 @@ max-width: fit-content;
   .featuresCard {
     grid-template-columns: repeat(2, 1fr);
   }
+  .featuresCard > * {
+  width: calc((100% - 40px) / 2);
+}
 
 }
 
@@ -672,9 +688,12 @@ max-width: fit-content;
   }
 
   .featuresCard {
-    grid-template-columns: 1fr;
-  }
+     grid-template-columns: repeat(1, 1fr);
 
+  }
+     .featuresCard > * {
+  width: calc((100% - 40px) / 1);
+}
   .insSummary {
     padding: 30px 20px;
   }
@@ -1407,7 +1426,7 @@ max-width: fit-content;
 .pricingSection {
   width: 100%;
   margin: 0 auto;
-  padding: 48px 20px;
+  padding: 48px 50px;
   background-color: #f5f5f5;
 
   display: flex;
@@ -1521,6 +1540,7 @@ max-width: fit-content;
 @media (max-width: 600px) {
   .pricingSection {
     padding: 35px 15px 45px;
+    margin-top: -30px;
   }
 
   .pricingSection .sectionText {
@@ -1552,6 +1572,8 @@ max-width: fit-content;
     width: 100%;
     gap: 16px;
     padding-top: 0;
+        height: fit-content;
+
   }
 
   .compareLink {

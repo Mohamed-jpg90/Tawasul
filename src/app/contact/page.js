@@ -18,7 +18,7 @@ export default function page() {
          <br /><br />
          <ExplinationDiv text={"هو وعد إننا نكون معك نسمعك ونشاركك خطوات النجاح"} buttom2={"جرب تواصل"}  />
         <PreFooter/>
-        <Footer/>  
+        <Footer/>
       
     </div>
   )

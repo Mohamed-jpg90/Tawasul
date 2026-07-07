@@ -73,12 +73,10 @@ export default function AllToolsyouNeed() {
         <div className='allToolsyouNeedContent' >
        <div className="sectionText">
           <h2 className="headerSeciont">
-            استكشف ميزات تــــواصل المتقدمة
-          </h2>
+مكونات تواصل الإضافية  كل الأدوات اللي تحتاجها... جاهزة تربطها          </h2>
 
-          <p>
-            نظام شامل لإنشاء المواقع الإلكترونية وإدارة العلاقات والبيانات، كل
-            شيء من مكان واحد.
+          <p className='supheader' >
+          ما تحتاج تطوّر من الصفر… "تواصل" يدعمك بمجموعة من المكونات الإضافية المتكاملة اللي تعزّز أداء موقعك وتحسّن تجربة عملائك
           </p>
         </div>
 

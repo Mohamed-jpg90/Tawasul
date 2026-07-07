@@ -120,7 +120,7 @@
 
 /* //////////////////////////////////////////////how tawasul serve you  */
 .tabs{
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 20px;
   display: flex;
@@ -137,6 +137,19 @@
 .tabs .activeTab{
    background-color: #3B5DC8;
    color: white;
+}
+@media (max-width:700px) {
+  .tabs{
+  width: 100%;
+ 
+}
+.tabs button{
+  border: 0px;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 20px;
+}
 }
 /* ////////////////////////// why sectors use twasul ////////////// */
 
@@ -176,7 +189,6 @@
 
 
 .PointImage {
-  width: 8px;
   height: 100%;
   min-width: 8px;
   border-radius: 50%;

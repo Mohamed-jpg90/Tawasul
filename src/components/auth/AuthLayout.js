@@ -6,7 +6,7 @@ import logo from '../../imag/9433969339dc30ff23e7c765411625e87ebea061.png'
 
 export default function AuthLayout({ children }) {
   return (
-    <div className="auth-page">
+    <div className="auth-page777"  >
       <div className="auth-wrapper">
         {/* Left panel: background image + overlay + brand */}
         <div className="auth-visual">
